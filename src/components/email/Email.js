@@ -23,7 +23,7 @@ function Email() {
                         required
                         placeholder="Enter Your name!"
                     />
-                    <Button className='mt-4' forEmail rounded primary to="trip">Sign Up</Button>
+                    <Button className='mt-4' forEmail rounded primary to="/">Sign Up</Button>
                 </EmailBox>
             </EmailContent>
         </EmailContainer>

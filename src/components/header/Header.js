@@ -3,7 +3,7 @@ import { navData } from '../../data/navData'
 import { Button } from '../Button'
 import { Nav, NavBar, NavLogo, NavMenuItems, NavMenuLink } from './HeaderElements'
 
-function Header() {
+function Header({ toggle }) {
     return (
         <Nav>
             <NavLogo to="/">Hossein</NavLogo>
@@ -12,8 +12,8 @@ function Header() {
                     <NavMenuLink to={item.link} key={item.id}>{item.title}</NavMenuLink>
                 ))}
             </NavMenuItems>
-            <Button to="/trips" rounded primary responsive>Book a flight</Button>
-            <NavBar />
+            <Button to="/" rounded primary responsive>Book a flight</Button>
+            <NavBar onClick={toggle} />
         </Nav>
     )
 }

@@ -16,7 +16,7 @@ function Trips() {
                                 <TripsLocation />
                                 <TripsTitle>{item.name}</TripsTitle>
                             </TripsLocationContainer>
-                            <Button primary rounded forCard to="/trips">View Destination</Button>
+                            <Button primary rounded forCard to="/">View Destination</Button>
                         </TripsCardItem>
                     ))}
                 </TripsWrapper>

@@ -12,7 +12,7 @@ function Hero() {
             <HeroContent>
                 <HeroH1>Unreal Destinations</HeroH1>
                 <HeroP>out of this world</HeroP>
-                <Button to="/trips" rounded primary big className='mt-8'>Travel Now</Button>
+                <Button to="/" rounded primary big className='mt-8'>Travel Now</Button>
             </HeroContent>
         </HeroContainer>
     )
