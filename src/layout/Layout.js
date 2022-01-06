@@ -11,7 +11,7 @@ function Layout({ children }) {
     }
 
     return (
-        <div>
+        <div className='overflow-x-hidden'>
             <DropDown
                 isOpen={isOpen}
                 toggle={toggle}
