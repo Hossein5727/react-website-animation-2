@@ -16,6 +16,7 @@ export const DropDownContainer = styled.section`
   color: #fff;
   opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-1000px")};
+  overflow-x: hidden !important;
 `;
 
 export const DropDownNav = styled(MdOutlineClose)`
