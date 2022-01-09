@@ -17,8 +17,6 @@ function DropDown({ isOpen, toggle }) {
                 {navData.map(item => (
                     <DropDownLink onClick={toggle} key={item.id} to={item.link}>{item.title}</DropDownLink>
                 ))}
-                {/* <Button className='mt-16' onClick={toggle} rounded to="/login">Login</Button> */}
-
                 {Auth
                     ?
                     (<div className='mt-16 flex'>
