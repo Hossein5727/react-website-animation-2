@@ -1,18 +1,32 @@
 import React from 'react'
 import { navData } from '../../data/navData'
+import { UseAuth, UseAuthActions } from '../../providers/AuthProvider'
 import { Button } from '../Button'
-import { Nav, NavBar, NavLogo, NavMenuItems, NavMenuLink } from './HeaderElements'
+import { Nav, NavBar, NavLogo, NavLogOut, NavMenuItems, NavMenuLink } from './HeaderElements'
 
-function Header({ toggle }) {
+function Header({ toggle, isHome }) {
+
+    const Auth = UseAuth()
+    const { handleLogOut } = UseAuthActions()
+
     return (
-        <Nav>
+        <Nav isHome={isHome}>
             <NavLogo to="/">Hossein</NavLogo>
             <NavMenuItems>
                 {navData.map(item => (
                     <NavMenuLink to={item.link} key={item.id}>{item.title}</NavMenuLink>
                 ))}
             </NavMenuItems>
-            <Button to="/" rounded primary responsive>Book a flight</Button>
+            {Auth
+                ?
+                (<div className='flex'>
+                    <h1 className='text-xl text-blue-700 bg-slate-50 p-2 rounded-xl'>{Auth}</h1>
+                    <br />
+                    <NavLogOut onClick={handleLogOut}>Log Out</NavLogOut>
+                </div>)
+                :
+                (<Button to="/login" rounded primary responsive>Login</Button>)
+            }
             <NavBar onClick={toggle} />
         </Nav>
     )

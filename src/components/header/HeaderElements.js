@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { FaBars } from 'react-icons/fa'
 
 export const Nav = styled.nav`
-  background: transparent;
+  background: ${({ isHome }) => (isHome ? "transparent" : "#f59e0b")} ;
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -49,4 +49,13 @@ export const NavBar = styled(FaBars)`
   @media screen and (max-width:768px) {
       display: block;
   }
+`;
+
+export const NavLogOut = styled.button`
+  background-color: #a16207;
+  padding: 0 9px;
+  font-size: 13px;
+  border-radius: 6px;
+  display: block;
+  margin-left: 4px;
 `;
