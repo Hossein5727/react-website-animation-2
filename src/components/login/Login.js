@@ -1,5 +1,5 @@
 import React from 'react'
-import { LoginButton, LoginContainer, LoginContent, LoginImage, LoginTitle } from './LoginElements'
+import { LoginButton, LoginContainer, LoginContent, LoginImage, LoginTitle, LoginBg } from './LoginElements'
 import Image1 from '../../assets/image/login.jpg'
 import { useFormik } from 'formik'
 import * as yup from 'yup';
@@ -45,6 +45,7 @@ function Login() {
 
     return (
         <LoginContainer onSubmit={formik.handleSubmit}>
+            <LoginBg src={Image1} />
             <LoginContent>
                 <LoginTitle>Login</LoginTitle>
                 {inputData.map(item => (
@@ -64,7 +65,7 @@ function Login() {
                 loading='lazy'
                 alt='login'
             />
-        </LoginContainer>
+        </LoginContainer >
     )
 }
 

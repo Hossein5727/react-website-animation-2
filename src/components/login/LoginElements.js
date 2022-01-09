@@ -23,13 +23,21 @@ export const LoginTextFiled = styled.input`
   color: #000;
   margin: 12px;
   transition: 0.2s all;
-
+  
   &:hover{
-      border: 1px solid #F59E0B;
+    border: 1px solid #F59E0B;
   }
   
   @media screen and (max-width: 768px) {
-      width: 320px;
+    overflow-x: hidden;
+      width: 300px;
+      border: none;
+      z-index: 9;
+
+      &:hover{
+      border: none;
+  }
+
 }
 `;
 
@@ -41,15 +49,19 @@ export const BoxLabel = styled.div`
 `;
 
 export const LoginContent = styled.div`
+  overflow-x: hidden !important;
   padding: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-right: 130px;
+
   
-  @media screen and (max-width: 678px) {
-  margin-right: 0;
+  
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    margin-right: 0;
   }
 `;
 
@@ -91,4 +103,20 @@ export const LoginButton = styled.button`
         background: #F26A2E;
         transform: translate(-2px);
     }
+`;
+
+export const LoginBg = styled.img`
+    display: none;
+    overflow-x: hidden;
+  @media screen and (max-width:768px) {
+    display: block;
+    width: 95%;
+    position: relative;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 15px;
+
+  }
+  
+
 `;
