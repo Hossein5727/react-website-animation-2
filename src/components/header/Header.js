@@ -19,7 +19,7 @@ function Header({ toggle, isHome }) {
             </NavMenuItems>
             {Auth
                 ?
-                (<div className='flex'>
+                (<div className='flex hidden sm:block'>
                     <h1 className='text-xl text-blue-700 bg-slate-50 p-2 rounded-xl'>{Auth}</h1>
                     <br />
                     <NavLogOut onClick={handleLogOut}>Log Out</NavLogOut>
