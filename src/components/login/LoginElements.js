@@ -79,9 +79,11 @@ export const LoginTitle = styled.h1`
   font-size: clamp(1.5rem,6vw,2.5rem);
   transform: translate(0,-120px);
   letter-spacing: 5px;
+  position: absolute;
+  top: 220px;
 
   @media screen and (max-width: 768px) {
-      letter-spacing: 0;
+      display: none;
   }
 `;
 
@@ -107,7 +109,7 @@ export const LoginButton = styled.button`
 
 export const LoginBg = styled.img`
     display: none;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   @media screen and (max-width:768px) {
     display: block;
     width: 95%;
